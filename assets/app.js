@@ -140,7 +140,6 @@ document.addEventListener("touchend", function (e) {
 }, false);
 
 document.addEventListener("touchmove", function (e) {
-    console.log("sdasd")
     let touch = e.touches[0];
     let mouseEvent = new MouseEvent("mousemove", {
         clientX: touch.clientX,
