@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Drawing password generator</title>
+        <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="assets/app.css"/>
+    </head>
+    <body>
+        <div class="description">
+            <h1>Drawing password generator</h1>
+            <p>Edit parameters, move the mouse, copy the password or the phrase!</p>
+            <p>Click to stop, click again to restart drawing!</p>
+            <br>
+            <label for="phraseLength">Length: </label>
+            <input id="phraseLength" type="number" value="10" placeholder="length">
+            <br><br>
+            <label for="symbolCheckBox">Symbols (!()-.?_$&+): </label>
+            <input type="checkbox" id="symbolCheckBox">
+            <br><br>
+            <input type="button" id="copyButton" value="Copy">
+            <input type="button" id="resetButton" value="Reset">
+        </div>
+        <p id="phraseContainer"></p>
+        <a class="madewith" href="https://tuttarealstep.github.io">Made by Stefano Valenzano</a>
+
+        <canvas id="canvasBoard"></canvas>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+        <script type="application/javascript" rel="script" src="assets/app.js"></script>
+    </body>
+</html>

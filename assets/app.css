@@ -1,0 +1,61 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+html, body
+{
+    width:100%;
+    height:100%;
+}
+
+canvas {
+    display:block;
+}
+
+.description
+{
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.madewith
+{
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    bottom: 5px;
+    position: fixed;
+    right: 5px;
+}
+
+#phraseContainer
+{
+    word-break: break-all;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#phraseLength, #copyButton, #resetButton
+{
+    border-radius: 8px;
+    padding: 2px;
+    border: 1px solid #000;
+    text-align: center;
+    background-color: #fff;
+}
+
+#copyButton, #resetButton
+{
+    width: 100px;
+    padding: 4px;
+    text-transform: uppercase;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+#copyButton:hover, #resetButton:hover
+{
+    background-color: #efefef;
+}
