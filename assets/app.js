@@ -148,3 +148,9 @@ document.addEventListener("touchmove", function (e) {
 
     document.dispatchEvent(mouseEvent);
 }, false);
+
+
+canvas.addEventListener("touchstart",  function(event) {event.preventDefault()})
+canvas.addEventListener("touchmove",   function(event) {event.preventDefault()})
+canvas.addEventListener("touchend",    function(event) {event.preventDefault()})
+canvas.addEventListener("touchcancel", function(event) {event.preventDefault()})
