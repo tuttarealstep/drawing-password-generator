@@ -125,25 +125,27 @@ new ClipboardJS('#copyButton', {
     }
 });
 
-canvas.addEventListener("touchstart", function (e) {
+document.addEventListener("touchstart", function (e) {
     let touch = e.touches[0];
     let mouseEvent = new MouseEvent("mousedown", {
         clientX: touch.clientX,
         clientY: touch.clientY
     });
-    canvas.dispatchEvent(mouseEvent);
+    document.dispatchEvent(mouseEvent);
 }, false);
 
-canvas.addEventListener("touchend", function (e) {
+document.addEventListener("touchend", function (e) {
     let mouseEvent = new MouseEvent("mouseup", {});
-    canvas.dispatchEvent(mouseEvent);
+    document.dispatchEvent(mouseEvent);
 }, false);
 
-canvas.addEventListener("touchmove", function (e) {
+document.addEventListener("touchmove", function (e) {
+    console.log("sdasd")
     let touch = e.touches[0];
     let mouseEvent = new MouseEvent("mousemove", {
         clientX: touch.clientX,
         clientY: touch.clientY
     });
-    canvas.dispatchEvent(mouseEvent);
+
+    document.dispatchEvent(mouseEvent);
 }, false);
