@@ -16,6 +16,7 @@ let symbolList = "!()-.?_$&+";
 let symbolsEnabled = false;
 let phrase = "";
 let stopDrawing = false;
+let timeEnabled = false;
 
 document.getElementById('resetButton').addEventListener('click', (e) => {
     resetPoolPhraseCanvas();
@@ -27,6 +28,16 @@ document.getElementById('symbolCheckBox').addEventListener('change', (event) => 
         symbolsEnabled = true;
     } else {
         symbolsEnabled = false;
+    }
+
+    resetPoolPhraseCanvas();
+});
+
+document.getElementById('timeCheckBox').addEventListener('change', (event) => {
+    if (event.target.checked) {
+        timeEnabled = true;
+    } else {
+        timeEnabled = false;
     }
 
     resetPoolPhraseCanvas();
@@ -66,7 +77,16 @@ function generatePhrase() {
         pool.shift()
     }
 
-    let gn = (event.clientX + event.clientY) + (event.clientX * event.clientY) + Math.floor(new Date());
+    let gn = (event.clientX + event.clientY);
+    gn += (event.clientX * event.clientY);
+
+    if(timeEnabled)
+    {
+        gn += Math.floor(new Date());
+    }
+
+    console.log(gn);
+
     pool.push(gn);
 
     phrase = "";
