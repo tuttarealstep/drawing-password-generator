@@ -85,8 +85,6 @@ function generatePhrase() {
         gn += Math.floor(new Date());
     }
 
-    console.log(gn);
-
     pool.push(gn);
 
     phrase = "";
