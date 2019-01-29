@@ -72,7 +72,7 @@ function resetPoolPhraseCanvas() {
     stopDrawing = false
 }
 
-function generatePhrase() {
+function generatePhrase(event) {
     if (pool.length > poolSize - 1) {
         pool.shift()
     }
@@ -134,7 +134,7 @@ document.addEventListener("mousemove", (event) => {
     context.fillRect(event.clientX + 2, event.clientY, 1, 1);
     context.fillRect(event.clientX, event.clientY, 1, 1);
 
-    generatePhrase();
+    generatePhrase(event);
 });
 
 new ClipboardJS('#copyButton', {
